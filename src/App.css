@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+.container {
+  display: flex;
+  justify-content: space-between; /* Distributes divs to opposite sides */
+  padding: 10px;
+}
+
+.leftDiv, .rightDiv {
+  width: 45%; /* Width to avoid full-width divs */
+  padding: 20px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.leftDiv {
+  background-color: #aedff7;
+}
+
+.rightDiv {
+  background-color: #f7aebe;
+}

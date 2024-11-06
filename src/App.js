@@ -1,25 +1,18 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Log_in from './Log_in';
+import MyContext from './Mycontent';
+import Greeting from './Greeting';
 
 function App() {
+  const [token, settoken] = useState('')
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <MyContext.Provider value={{token,settoken}}>
+      <Log_in className="leftDiv" />
+      <Greeting className="rightDiv" />
+      </MyContext.Provider>
     </div>
   );
 }
-
 export default App;
